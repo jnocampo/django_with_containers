@@ -19,8 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'greetings:index' %}">Home<span
-                            class="sr-only">(Current)</span></a>
+                    <a class="nav-link" href="{% url 'greetings:index' %}">Home</a>
 
                 </li>
                 <li class="nav-item">
@@ -32,7 +31,7 @@
                     <a class="nav-link" href="{% url 'greetings:dorm' %}">Dorms/Housing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'greetings:classes' %}">Classes</a>
+                    <a class="nav-link" href="{% url 'greetings:classes' %}">Classes<span class="sr-only">(Current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
@@ -75,23 +74,9 @@
     </nav>
 
     <header id="UHMarkerplaceHeader">
-        <h1>Welcome to the University of Hawaii Marketplace</h1>
-    </header>
-
-    {% if greeting_list %}
-    <ul>
-        {% for greeting in greeting_list %}
-        <li>
-            {{ greeting.message }}
-            <span><a href="{% url 'greetings:update' greeting.id %}">edit</a></span>
-            <span><a href="{% url 'greetings:delete' greeting.id %}">delete</a></span>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No Posts.</p>
-    {% endif %}
-    <a href="{% url 'greetings:create' %}">UH-Marketplace Post</a>
+      <h1>Classes</h1>
+      <h5>A place to discuss what classes to take</h3>
+  </header>
 
     <footer>
 

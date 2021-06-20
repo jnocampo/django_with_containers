@@ -19,8 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'greetings:index' %}">Home<span
-                            class="sr-only">(Current)</span></a>
+                    <a class="nav-link" href="{% url 'greetings:index' %}">Home</a>
 
                 </li>
                 <li class="nav-item">
@@ -37,10 +36,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Others
+                        Others<span class="sr-only">(Current)</span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'greetings:foodie' %}">Foodie</a></li>
+                        <li><a class="dropdown-item" href="{% url 'greetings:foodie' %}">Foodie<span class="sr-only">(Current)</span></a></li>
                         <li><a class="dropdown-item" href="{% url 'greetings:supplies' %}">School Supplies</a></li>
                     </ul>
                 </li>
@@ -75,23 +74,9 @@
     </nav>
 
     <header id="UHMarkerplaceHeader">
-        <h1>Welcome to the University of Hawaii Marketplace</h1>
-    </header>
-
-    {% if greeting_list %}
-    <ul>
-        {% for greeting in greeting_list %}
-        <li>
-            {{ greeting.message }}
-            <span><a href="{% url 'greetings:update' greeting.id %}">edit</a></span>
-            <span><a href="{% url 'greetings:delete' greeting.id %}">delete</a></span>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No Posts.</p>
-    {% endif %}
-    <a href="{% url 'greetings:create' %}">UH-Marketplace Post</a>
+      <h1>Foodie</h1>
+      <h5>A place to discuss about the awesome places to eat or horrible places to avoid</h3>
+  </header>
 
     <footer>
 
