@@ -40,9 +40,9 @@ class ClassesView(generic.ListView):
     model = Greeting
 
 class FoodieView(generic.ListView):
-    template_name = 'greetings/Foodie.html'
+    template_name = 'greetings/foodie.html'
     model = Greeting
 
 class SuppliesView(generic.ListView):
-    template_name = 'greetings/Supplies.html'
+    template_name = 'greetings/supplies.html'
     model = Greeting

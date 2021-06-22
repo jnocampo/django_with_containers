@@ -19,28 +19,29 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'greetings:index' %}">Home</a>
+                    <a class="nav-link" href="{% url 'uhmarketplace:index' %}">Home<span
+                            class="sr-only">(Current)</span></a>
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'greetings:textbook' %}">Textbooks</a>
+                    <a class="nav-link" href="{% url 'uhmarketplace:textbook' %}">Textbooks</a>
                 </li>
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'greetings:dorm' %}">Dorms/Housing</a>
+                    <a class="nav-link" href="{% url 'uhmarketplace:dorm' %}">Dorms/Housing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'greetings:classes' %}">Classes</a>
+                    <a class="nav-link" href="{% url 'uhmarketplace:classes' %}">Classes</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Others<span class="sr-only">(Current)</span>
+                        Others
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'greetings:foodie' %}">Foodie</a></li>
-                        <li><a class="dropdown-item" href="{% url 'greetings:supplies' %}">School Supplies<span class="sr-only">(Current)</span></a></li>
+                        <li><a class="dropdown-item" href="{% url 'uhmarketplace:foodie' %}">Foodie</a></li>
+                        <li><a class="dropdown-item" href="{% url 'uhmarketplace:supplies' %}">School Supplies</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -74,9 +75,23 @@
     </nav>
 
     <header id="UHMarkerplaceHeader">
-      <h1>School Supplies</h1>
-      <h5>A place to sell, buy, or trade school supplies</h3>
-  </header>
+        <h1>Welcome to the University of Hawaii Marketplace</h1>
+    </header>
+
+    {% if uhmarketplace_list %}
+    <ul>
+        {% for uhmarketplace in uhmarketplace_list %}
+        <li>
+            {{ uhmarketplace.message }}
+            <span><a href="{% url 'uhmarketplace:update' uhmarketplace.id %}">edit</a></span>
+            <span><a href="{% url 'uhmarketplace:delete' uhmarketplace.id %}">delete</a></span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Posts.</p>
+    {% endif %}
+    <a href="{% url 'uhmarketplace:create' %}">UH-Marketplace Post</a>
 
     <footer>
 
