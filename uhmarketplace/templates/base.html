@@ -24,29 +24,33 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="container-fluid base-background mx-auto" id="site-content">
-        <div class="container-fluid">
             
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand nav-link ml-auto" href="{% url 'uhmarketplace:index' %}">UH Marketplace</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid">
+        <a class="navbar-brand link-color" href="{% url 'uhmarketplace:index' %}">UH Marketplace</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:#e6e6ff; background-color:#024731; border-color: white;">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
+            <span class="icon-bar top "></span>
+            <span class="icon-bar middle "></span>
+            <span class="icon-bar bottom "></span>
+          </button>
+          <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="mx-auto">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'uhmarketplace:textbook' %}">Textbooks</a>
+                    <a class="nav-link link-color" href="{% url 'uhmarketplace:textbook' %}">Textbooks</a>
                 </li>
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'uhmarketplace:dorm' %}">Housing</a>
+                    <a class="nav-link link-color" href="{% url 'uhmarketplace:dorm' %}">Housing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'uhmarketplace:classes' %}">Classes</a>
+                    <a class="nav-link link-color" href="{% url 'uhmarketplace:classes' %}">Classes</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mr-auto" href="" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle link-color" href="" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Others
                     </a>
@@ -56,7 +60,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle link-color" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Official UH Websites
                     </a>
@@ -69,7 +73,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle link-color" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         UH Links
                     </a>
@@ -82,9 +86,13 @@
                     </ul>
                 </li>
             </ul>
-            <a class="nav-link mr-auto" href="{% url 'uhmarketplace:index' %}">Sign In</a>
+        </div>
+        <button type="button" class="btn btn-outline-light btn-sm" style="border-radius: 15%;">
+            <a class="nav-link mr-auto link-color" href="{% url 'uhmarketplace:index' %}">Sign In</a></button>
         </div>
     </div>
+    </div>
+    
     </nav>
 </div>
 </div>
@@ -105,7 +113,7 @@
     <footer class="container text-center" > 
         <hr /> 
         This application is owned and maintained by <i>The Revengers</i> <br />
-        <a class="nav-link" href="{% url 'uhmarketplace:index' %}">Home<span
+        <a class="nav-link link-color" href="{% url 'uhmarketplace:index' %}">Home<span
             class="sr-only"></span></a>
     </footer>
     </div>

@@ -54,11 +54,33 @@
     color: white;
 }
 
-.nav-link {
+.link-color {
     color: white !important;
 }
 
+/* CSS for custom toggle icon */
+.icon-bar
+{
+    display: block;
+    width: 30px;
+    height: 1px;
+    border-radius:1px;
+    border:1px solid white;
+    color: white;
+}
 
+.top {
+    bottom: 13px;
+    position: relative;
+}
+.middle {
+    bottom: 5px;
+    position: relative;
+}
+.bottom{
+    top: 20px;
+    position: absolute;
+}
 
 /* responsive css */
 
