@@ -1,92 +1,15 @@
+{% extends "base.html" %}
 
-<head>
-    <title>University of Hawaii Marketplace</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-</head>
-
-<div class = "manoa">
-<body>
-    <span class="border border-primary"></span>   
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Aloha!</strong> Navigate using the bar below .
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(99, 230, 99);">
-        <a class="navbar-brand">UH-Marketplace</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'uhmarketplace:index' %}">Home<span
-                            class="sr-only">(Current)</span></a>
-
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'uhmarketplace:textbook' %}">Textbooks</a>
-                </li>
-
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'uhmarketplace:dorm' %}">Dorms/Housing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'uhmarketplace:classes' %}">Classes</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Others
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'uhmarketplace:foodie' %}">Foodie</a></li>
-                        <li><a class="dropdown-item" href="{% url 'uhmarketplace:supplies' %}">School Supplies</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Official UH Websites
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://www.honolulu.hawaii.edu/">Honolulu</a></li>
-                        <li><a class="dropdown-item" href="https://www.leeward.hawaii.edu/">Leeward</a></li>
-                        <li><a class="dropdown-item" href="https://www.kapiolani.hawaii.edu/">Kapiolani</a></li>
-                        <li><a class="dropdown-item" href="https://manoa.hawaii.edu/">Manoa</a></li>
-                        <li><a class="dropdown-item" href="https://windward.hawaii.edu/">Windward</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        UH Links
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://laulima.hawaii.edu/portal">Laulima</a></li>
-                        <li><a class="dropdown-item" href="https://myuh.hawaii.edu/">MyUH</a></li>
-                        <li><a class="dropdown-item"
-                                href="https://www.star.hawaii.edu/studentinterface/NewHome.jsp?page=GraduationPathway">Star</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+    {% block content %}
+    <div id="site-content" class="mx-auto"
     <header id="UHMarkerplaceHeader">
         <center>
         <h1>Welcome to the University of Hawaii Marketplace</h1>
         </center>
     </header>
-    <div class= "tree">
-    <div class= "tree2">
-    <div class = "rainbow">
+    <div class= "tree container-fluid ">
+    <div class= "tree2 container-fluid">
+    <div class = "rainbow mx-auto">
         <h1> <u>Basics info about site:</u> </h2>
         <p> -This site was created to help <span style="color:green"> UHM </span> students!!! <br />
             -Students can visit pages such as <u>textbooks</u> to see if anyone is selling textbooks at a low price!!! <br />
@@ -112,15 +35,6 @@
              </div>    
         </div>
     </div>
-        <div id = "footer" >
-            <footer > *page is owned and maintained by <i>The Revengers</i></footer>
-            </div>
+</div>
 
-
-    <script src="bootstrap.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
-
-</body>
-
+    {%endblock %}
