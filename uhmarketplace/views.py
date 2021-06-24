@@ -13,19 +13,19 @@ class IndexView(generic.ListView):
 class CreateView(generic.edit.CreateView):
     template_name = 'uhmarketplace/create.html'
     model = Uhmarketplace
-    fields = ['message']
-    success_url = reverse_lazy('uhmarketplace:index') # more robust than hardcoding to /uhmarketplace/; directs user to index view after creating a Uhmarketplace
+    fields = ['book_title','book_author','course','content']
+    success_url = reverse_lazy('uhmarketplace:textbook') # more robust than hardcoding to /uhmarketplace/; directs user to index view after creating a Uhmarketplace
 
 class UpdateView(generic.edit.UpdateView):
     template_name = 'uhmarketplace/update.html'
     model = Uhmarketplace
-    fields = ['message']
-    success_url = reverse_lazy('uhmarketplace:index')
+    fields = ['book_title','book_author','course','content']
+    success_url = reverse_lazy('uhmarketplace:textbook')
 
 class DeleteView(generic.edit.DeleteView):
     template_name = 'uhmarketplace/delete.html' # override default of uhmarketplace/uhmarketplace_confirm_delete.html
     model = Uhmarketplace
-    success_url = reverse_lazy('uhmarketplace:index')
+    success_url = reverse_lazy('uhmarketplace:textbook')
 
 class TextbookView(generic.ListView):
     template_name = 'uhmarketplace/textbook.html'

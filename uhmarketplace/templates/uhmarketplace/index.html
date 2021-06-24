@@ -78,21 +78,6 @@
         <h1>Welcome to the University of Hawaii Marketplace</h1>
     </header>
 
-    {% if uhmarketplace_list %}
-    <ul>
-        {% for uhmarketplace in uhmarketplace_list %}
-        <li>
-            {{ uhmarketplace.message }}
-            <span><a href="{% url 'uhmarketplace:update' uhmarketplace.id %}">edit</a></span>
-            <span><a href="{% url 'uhmarketplace:delete' uhmarketplace.id %}">delete</a></span>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No Posts.</p>
-    {% endif %}
-    <a href="{% url 'uhmarketplace:create' %}">UH-Marketplace Post</a>
-
     <footer>
 
     </footer>

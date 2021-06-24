@@ -78,8 +78,29 @@
 
     <header id="UHMarkerplaceHeader">
         <h1>Textbooks</h1>
-        <h5>A place to buy, sell, or trade textbooks</h3>
+        <p>A place to buy, sell, or trade textbooks</p>
+
     </header>
+
+    {% if uhmarketplace_list %}
+    <ul>
+        {% for uhmarketplace in uhmarketplace_list %}
+        <li>
+            <h4>{{ uhmarketplace.book_title }}</h4>
+            <p><b>Author:</b> {{ uhmarketplace.book_author }}</p>
+            <p><b>Course</b>: {{ uhmarketplace.course }}</p>
+            <p><b>Comments</b></p>
+            <p>{{ uhmarketplace.content}}</p>
+            <h6>{{ uhmarketplace.created_on }}</h6>
+            <span><a href="{% url 'uhmarketplace:update' uhmarketplace.id %}">edit</a></span>
+            <span><a href="{% url 'uhmarketplace:delete' uhmarketplace.id %}">delete</a></span>
+        </ii>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Posts.</p>
+    {% endif %}
+    <a href="{% url 'uhmarketplace:create' %}">UH-Marketplace Post</a>
 
     <footer>
 
