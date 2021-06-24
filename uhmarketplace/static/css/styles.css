@@ -1,0 +1,49 @@
+
+.manoa{
+    font-family:fantasy;
+}
+#UHMarkerplaceHeader{
+    color:darkgreen;   /*color*/
+    text-shadow:2px 1px rgb(108, 241, 68);
+    
+}
+.logo{
+    background-image:url("https://www.logolynx.com/images/logolynx/98/98e5048822d9387f0503cf42903b43d4.png");
+    background-size: 50px 50px;
+    margin-left: 500px;
+    margin-right: 600px;
+    background-repeat: no-repeat;
+}
+.rainbow{
+    border: 10px solid;
+    padding: 10px;
+    width: 900px;
+    height: 175px;
+    margin-left:500px;        /*box model*/
+    margin-right:250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-image:url("https://library.kissclipart.com/20180829/qxq/kissclipart-rainbow-circle-clipart-clip-art-5cd377b85927975d.jpg") 200 round;
+    }
+ .rainbow > h1, h2, h3, h4 {
+    font-family:cursive;  
+    font-size: 2em;
+ }
+ .tree{
+    background-image:url("https://assets.onlinelabels.com/images/clip-art/frankes/tree%20-%20coloured-213775.png");
+    background-size: 250px 300px;
+    background-position: right;
+    background-repeat: repeat-y;
+    }
+    .tree2{
+        background-image:url("https://assets.onlinelabels.com/images/clip-art/frankes/tree%20-%20coloured-213775.png");
+        background-size: 250px 300px;
+        background-position:left;
+        background-repeat: repeat-y;
+        }
+
+
+#footer{
+    font-family:monospace;
+    font-size: 15px;
+}

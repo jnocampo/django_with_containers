@@ -1,14 +1,19 @@
-<html>
 
 <head>
     <title>University of Hawaii Marketplace</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 
-
-
+<div class = "manoa">
 <body>
+    <span class="border border-primary"></span>   
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Aloha!</strong> Navigate using the bar below .
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(99, 230, 99);">
         <a class="navbar-brand">UH-Marketplace</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -73,14 +78,44 @@
             </ul>
         </div>
     </nav>
-
+</div>
     <header id="UHMarkerplaceHeader">
+        <center>
         <h1>Welcome to the University of Hawaii Marketplace</h1>
+        </center>
     </header>
+    <div class= "tree">
+    <div class= "tree2">
+    <div class = "rainbow">
+        <h1> <u>Basics info about site:</u> </h2>
+        <p> -This site was created to help <span style="color:green"> UHM </span> students!!! <br />
+            -Students can visit pages such as <u>textbooks</u> to see if anyone is selling textbooks at a low price!!! <br />
+            -Site is free to use!!!
+        </div>
+    <div class = "rainbow">
+        <h2> <u>How to get started:</u> </h2>
+        <p> -Navigate using the top bar and visit sites you are interested in <br />
+            -Intructions and additional information will be included in the site that you visit <br />
+            -Make the best out of your college experience
+        </div>
+    <div class = "rainbow">
+        <h3> <u>Tips for incoming freshmen:</u> </h3>
+        <p> -Subscribe to Chegg(Don't abuse it!!!)  <br />
+            -Dont be afraid to ask questions <br />
+            -Make friends
+         </div>    
+    <div class = "rainbow">
+            <h4> <u>Rules and Regulations:</u> </h4>
+            <p> -Do not conduct any illegal activities  <br />
+                -Do not bully, harass, or discriminate others <br />
+                -Do not use this site to cheat on any class (<span style="color:red"> BE ETHICAL OR WE WILL REPORT YOU TO THE FBI!!! </span>) 
+             </div>    
+        </div>
+    </div>
+        <div id = "footer" >
+            <footer > *page is owned and maintained by <i>The Revengers</i></footer>
+            </div>
 
-    <footer>
-
-    </footer>
 
     <script src="bootstrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
@@ -89,4 +124,3 @@
 
 </body>
 
-</html>
