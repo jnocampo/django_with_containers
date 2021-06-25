@@ -19,8 +19,8 @@
     padding: 10px;
     width: 900px;
     height: 175px;
-    margin-left:500px;        /*box model*/
-    margin-right:250px;
+    margin-left: auto;        /*box model*/
+    margin-right: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     border-image:url("https://library.kissclipart.com/20180829/qxq/kissclipart-rainbow-circle-clipart-clip-art-5cd377b85927975d.jpg") 200 round;
@@ -28,6 +28,7 @@
  .rainbow > h1, h2, h3, h4 {
     font-family:cursive;  
     font-size: 2em;
+    text-align: center;
  }
  .tree{
     background-image:url("https://assets.onlinelabels.com/images/clip-art/frankes/tree%20-%20coloured-213775.png");
@@ -47,3 +48,90 @@
     font-family:monospace;
     font-size: 15px;
 }
+
+.base-background {
+    background-color: #024731 !important;
+    color: white;
+}
+
+.link-color {
+    color: white !important;
+}
+
+/* CSS for custom toggle icon */
+.icon-bar
+{
+    display: block;
+    width: 30px;
+    height: 1px;
+    border-radius:1px;
+    border:1px solid white;
+    color: white;
+}
+
+.top {
+    bottom: 13px;
+    position: relative;
+}
+.middle {
+    bottom: 5px;
+    position: relative;
+}
+.bottom{
+    top: 20px;
+    position: absolute;
+}
+
+/* responsive css */
+
+/*
+      SUPER SMALL PHONES
+*/
+
+@media (max-width: 320px) {
+    #section-content {
+      font-size: 2em;
+      max-width: 100%;
+    }
+  }
+  
+  /* BIG-ISH SCREENS / Tablets */
+  
+  @media (min-width: 768px) {
+
+    #section-content {
+      font-size: 2em;
+      max-width: 100%;
+    }
+
+  }
+  
+  /* regular laptops */
+  
+  @media (min-width: 992px) { 
+    #site-content {
+      max-width: 100%;
+      flex: 1 0 auto;
+    }
+  
+  
+    footer span {
+      font-size: 1.25rem;
+    }
+  
+    footer p {
+      font-size: 1rem;
+    }
+  }
+  
+  /***********************************
+        LARGE LAPTOPS / DESKTOPS
+  ***********************************/
+  
+  @media (min-width: 1200px) {
+    #site-content {
+      max-width: 100%;
+    }
+  
+  }
+  
