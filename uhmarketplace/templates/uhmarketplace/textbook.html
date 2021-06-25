@@ -1,17 +1,17 @@
-
 {% extends "base.html" %}
 
 {% block content %}
 
-    <header id="UHMarkerplaceHeader">
-        <h1>Textbooks</h1>
-        <p>A place to buy, sell, or trade textbooks</p>
+<header id="UHMarkerplaceHeader">
+    <h1>Textbooks</h1>
+    <p>A place to buy, sell, or trade textbooks</p>
 
-    </header>
+</header>
 
-    {% if uhmarketplace_list %}
+<div style="text-align:center">
+    {% if textbook_list %}
     <ul>
-        {% for uhmarketplace in uhmarketplace_list %}
+        {% for uhmarketplace in textbook_list %}
         <li>
             <h4>{{ uhmarketplace.book_title }}</h4>
             <p><b>Author:</b> {{ uhmarketplace.book_author }}</p>
@@ -19,15 +19,16 @@
             <p><b>Comments</b></p>
             <p>{{ uhmarketplace.content}}</p>
             <h6>{{ uhmarketplace.created_on }}</h6>
-            <span><a href="{% url 'uhmarketplace:update' uhmarketplace.id %}">edit</a></span>
-            <span><a href="{% url 'uhmarketplace:delete' uhmarketplace.id %}">delete</a></span>
-        </ii>
-        {% endfor %}
+            <span><a href="{% url 'uhmarketplace:updatetextbook' uhmarketplace.id %}">edit</a></span>
+            <span><a href="{% url 'uhmarketplace:deletetextbook' uhmarketplace.id %}">delete</a></span>
+            </ii>
+            {% endfor %}
     </ul>
     {% else %}
-    <p>No Posts.</p>
+    <p style="text-align:center">No Posts.</p>
     {% endif %}
-    <a href="{% url 'uhmarketplace:create' %}">UH-Marketplace Post</a>
 
-    
-    {%endblock %}
+    <a href="{% url 'uhmarketplace:createtextbook' %}">Post Your Textbook Here</a>
+</div>
+
+{%endblock %}

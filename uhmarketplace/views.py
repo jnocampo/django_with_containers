@@ -1,35 +1,35 @@
 from django.views import generic
 from django.urls import reverse_lazy
-from .models import Uhmarketplace
+from .models import Textbook, Uhmarketplace
 
 class IndexView(generic.ListView):
     template_name = 'uhmarketplace/index.html'
-    context_object_name = 'uhmarketplace_list'
-
-    def get_queryset(self):
-        """Return the all uhmarketplace."""
-        return Uhmarketplace.objects.all()
+    model = Uhmarketplace
 
 class CreateView(generic.edit.CreateView):
-    template_name = 'uhmarketplace/create.html'
-    model = Uhmarketplace
+    template_name = 'uhmarketplace/createtextbook.html'
+    model = Textbook
     fields = ['book_title','book_author','course','content']
     success_url = reverse_lazy('uhmarketplace:textbook') # more robust than hardcoding to /uhmarketplace/; directs user to index view after creating a Uhmarketplace
 
 class UpdateView(generic.edit.UpdateView):
-    template_name = 'uhmarketplace/update.html'
-    model = Uhmarketplace
+    template_name = 'uhmarketplace/updatetextbook.html'
+    model = Textbook
     fields = ['book_title','book_author','course','content']
     success_url = reverse_lazy('uhmarketplace:textbook')
 
 class DeleteView(generic.edit.DeleteView):
-    template_name = 'uhmarketplace/delete.html' # override default of uhmarketplace/uhmarketplace_confirm_delete.html
-    model = Uhmarketplace
+    template_name = 'uhmarketplace/deletetextbook.html' # override default of uhmarketplace/uhmarketplace_confirm_delete.html
+    model = Textbook
     success_url = reverse_lazy('uhmarketplace:textbook')
 
 class TextbookView(generic.ListView):
     template_name = 'uhmarketplace/textbook.html'
-    model = Uhmarketplace
+    context_object_name = 'textbook_list'
+
+    def get_queryset(self):
+        """Return the all uhmarketplace."""
+        return Textbook.objects.all()
 
 class DormView(generic.ListView):
     template_name = 'uhmarketplace/dorm.html'

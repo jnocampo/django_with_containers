@@ -1,7 +1,9 @@
 from django.db import models
 
-
 class Uhmarketplace(models.Model):
+    message = models.CharField(max_length=80)
+
+class Textbook(models.Model):
     book_title = models.CharField(max_length=80)
     book_author = models.CharField(max_length=80)
     course = models.CharField(max_length=80)
